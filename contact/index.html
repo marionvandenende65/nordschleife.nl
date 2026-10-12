@@ -225,7 +225,11 @@ footer.site .fine a{color:var(--accent);text-decoration:none}
   .article-grid,.cat-blocks,.internal-links-block{grid-template-columns:1fr}
   .home-intro,.pillar,.art-body{padding-left:22px;padding-right:22px}
   .tagline-bar p{letter-spacing:2px;font-size:10px}
-  .featured-overlay{padding:40px 20px 20px}
+  /* 12-10-2026: op smalle schermen stond de overlay absoluut onderin een beeld van vaste
+     hoogte; bij een lange titel + samenvatting liep hij boven het beeld uit en werd het begin
+     van de titel afgekapt (overflow:hidden). Daarom onder 600 px gewoon onder het beeld. */
+  .featured-wrap>img,.featured-wrap .ph{height:240px}
+  .featured-overlay{position:static;background:var(--ink);padding:16px 20px 20px}
   .feat-title{font-size:22px}
   .art-title,.page-banner h1{font-size:26px}
 }
